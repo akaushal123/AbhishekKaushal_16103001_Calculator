@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Calculator</title>
+      <style media="screen">
+        form
+        {
+          align-content: center;
+          background-color: gray;
+          position: relative;
+          width:250px;
+          left: 37%;
+        }
+      </style>
+  </head>
+  <body bgcolor="#B8860B">
+    <h1 align = "center">Javascript Calculator</h1><br/><hr size ="5px" color="black"/>
+    <form name="calculator" class="calc" onclick="script" method="post" align="center" style="padding:50px; rowspan:2px; colspan:2px; border-radius:5px">
+        <input name="Display" placeholder="0" style="width:200px; height:30px; text-align:right; font-family:Times New Roman; Font-size:25px; border-radius:8px; background-color:aqua; font-color:white"><br/><br/>
+
+        <input type="button" value="7" onclick="document.calculator.Display.value +='7'" style="width:50px;height:50px; font-family:Arial; font-size:30px; border-radius:25px; margin:3px; background-color:#FFA07A">
+        <input type="button" value="8" onclick="document.calculator.Display.value +='8'" style="width:50px;height:50px; font-family:Arial; font-size:30px; border-radius:25px; background-color:#FFA07A">
+        <input type="button" value="9" onclick="document.calculator.Display.value +='9'" style="width:50px;height:50px; font-family:Arial; font-size:30px; border-radius:25px; background-color:#FFA07A">
+        <input type="button" value="+" onclick="sum()" style="width:50px;height:50px; font-family:Arial; font-size:30px;border-radius:25px; background-color:#3CB371"><br/>
+
+        <input type="button" value="4" onclick="document.calculator.Display.value +='4'" style="width:50px;height:50px; font-family:Arial; font-size:30px; border-radius:25px; margin:3px; background-color:#FFA07A; ">
+        <input type="button" value="5" onclick="document.calculator.Display.value +='5'" style="width:50px;height:50px; font-family:Arial; font-size:30px; border-radius:25px; background-color:#FFA07A; ">
+        <input type="button" value="6" onclick="document.calculator.Display.value +='6'" style="width:50px;height:50px; font-family:Arial; font-size:30px; border-radius:25px; background-color:#FFA07A; ">
+        <input type="button" value="-" onclick="sub()" onkeypress="sub()" style="width:50px;height:50px; font-family:Arial; font-size:30px; border-radius:25px; background-color:#3CB371"><br/>
+
+        <input type="button" value="1" onclick="document.calculator.Display.value +='1'" style="width:50px;height:50px; font-family:Arial; font-size:30px; border-radius:25px; margin:3px; background-color:#FFA07A; ">
+        <input type="button" value="2" onclick="document.calculator.Display.value +='2'" style="width:50px;height:50px; font-family:Arial; font-size:30px; border-radius:25px; background-color:#FFA07A;">
+        <input type="button" value="3" onclick="document.calculator.Display.value +='3'" style="width:50px;height:50px; font-family:Arial; font-size:30px; border-radius:25px; background-color:#FFA07A; ">
+        <input type="button" value="*" onclick="mult()" onkeypress="mult()" style="width:50px;height:50px; font-family:Arial; font-size:30px; border-radius:25px; background-color:#3CB371"><br/>
+
+        <input type="button" value="0" onclick="document.calculator.Display.value +='0'" style="width:50px;height:50px; font-family:Arial; font-size:30px; border-radius:25px; margin:3px; background-color:#FFA07A">
+        <input type="button" value="%" onclick="remainder()" style="width:50px;height:50px; font-family:Arial; font-size:30px; border-radius:25px; background-color:#3CB371">
+        <input type="button" value="x^x" onclick="document.calculator.Display.value = Math.pow(calculator.Display.value, calculator.Display.value)" style="width:50px;height:50px; font-family:Arial; font-size:28px; border-radius:25px; background-color:#3CB371">
+        <input type="button" value="/" onclick="divison()" style="width:50px;height:50px; font-family:Arial; font-size:30px; border-radius:25px; background-color:#3CB371"><br/>
+
+        <input type="button" value="&" onclick="and()" style="width:50px;height:50px; font-family:Arial; font-size:30px; border-radius:25px; background-color:#3CB371">
+        <input type="button" value="^" onclick="XOR()" style="width:50px;height:50px; font-family:Arial; font-size:30px; border-radius:25px; background-color:#3CB371">
+        <input type="button" value="||" onclick="OR()" style="width:50px;height:50px; font-family:Arial; font-size:30px; border-radius:25px; background-color:#3CB371">
+        <input type="button" value="~" onclick="NOT()" style="width:50px;height:50px; font-family:Arial; font-size:30px; border-radius:25px; background-color:#3CB371"><br/>
+
+        <input type="button" value="=" onclick="document.calculator.Display.value = eval(document.calculator.Display.value)" style="width:105px;height:50px; font-family:Arial; font-size:30px; border-radius:25px; margin:3px; background-color:red">
+        <input type="reset" value="C" onclick="clr()" style="width:105px;height:50px; font-family:Arial; font-size:30px; border-radius:25px; background-color:red">
+
+    <script type="text/javascript">
+      function sum()
+      {
+        document.calculator.Display.value +="+";
+        document.calculator.Display.stylr.textAlign ="right";
+      }
+      function sub()
+      {
+        document.calculator.Display.value +="-";
+        document.calculator.Display.stylr.textAlign ="right";
+      }
+      function mult()
+      {
+        document.calculator.Display.value +="*";
+        document.calculator.Display.stylr.textAlign ="right";
+      }
+      function sum()
+      {
+        document.calculator.Display.value +="+";
+        document.calculator.Display.stylr.textAlign ="right";
+      }
+      function divison()
+      {
+        document.calculator.Display.value +="/";
+        document.calculator.Display.stylr.textAlign ="right";
+      }
+      function remainder()
+      {
+        document.calculator.Display.value +="%";
+        document.calculator.Display.stylr.textAlign ="right";
+      }
+      function and()
+      {
+        document.calculator.Display.value +="&";
+        document.calculator.Display.stylr.textAlign ="right";
+      }
+      function OR()
+      {
+        document.calculator.Display.value +="||";
+        document.calculator.Display.stylr.textAlign ="right";
+      }
+      function XOR()
+      {
+        document.calculator.Display.value +="^";
+        document.calculator.Display.stylr.textAlign ="right";
+      }
+      function NOT()
+      {
+        document.calculator.Display.value +="~";
+        document.calculator.Display.stylr.textAlign ="right";
+      }
+    </script>
+  </form>
+  </body>
+</html>
